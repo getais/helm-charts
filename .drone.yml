@@ -1,0 +1,17 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+  - name: Chart releaser
+    image: quay.io/helmpack/chart-releaser:v1.4.1
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_RELEASE_TOKEN
+    commands:
+      - cr package charts/*
+      - cr upload --owner getais --git-repo helm-charts --token $GITHUB_TOKEN --skip-existing
+      - cr index --owner getais --git-repo helm-charts --token $GITHUB_TOKEN --index-path index.yaml --push
+    when:
+      event:
+        - push
