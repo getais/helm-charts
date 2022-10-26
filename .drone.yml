@@ -3,6 +3,11 @@ type: kubernetes
 name: default
 
 steps:
+  - name: fetch
+    image: docker:git
+    commands:
+      - git fetch --tags
+
   - name: Chart releaser
     image: quay.io/helmpack/chart-releaser:v1.4.1
     environment:
