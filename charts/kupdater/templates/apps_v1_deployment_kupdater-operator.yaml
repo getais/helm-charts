@@ -47,7 +47,7 @@ spec:
         - --leader-elect
         command:
         - kupdater
-        image: ghcr.io/getais/kupdater/operator:0.2.0
+        image: ghcr.io/getais/kupdater/operator:0.2.1
         livenessProbe:
           httpGet:
             path: /healthz
