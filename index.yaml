@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   kupdater:
   - apiVersion: v2
+    created: "2022-11-04T23:22:32.426838024Z"
+    description: A Helm chart for Kubernetes
+    digest: 9d31508113b7ed9105f67b1241fb927d38a6e14a19b99b895c4a8a4dffecac83
+    name: kupdater
+    type: application
+    urls:
+    - https://github.com/getais/helm-charts/releases/download/kupdater-0.2.1/kupdater-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
     created: "2022-10-29T20:49:54.810657959Z"
     description: A Helm chart for Kubernetes
     digest: 56550a8d838bf04f4f6c360b8306fd70fba72ff53e3c6fd9119dcfe1ab09efbf
@@ -28,4 +37,4 @@ entries:
     urls:
     - https://github.com/getais/helm-charts/releases/download/kupdater-0.1.0/kupdater-0.1.0.tgz
     version: 0.1.0
-generated: "2022-10-29T20:49:54.810681186Z"
+generated: "2022-11-04T23:22:32.426854323Z"
